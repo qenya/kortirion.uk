@@ -4,10 +4,11 @@
 <head>
     <meta charset="utf-8" />
     <title>The Trees of Kortirion</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
         body {
             counter-reset: section;
-            margin: 5rem 0;
+            margin: 5rem 1rem;
         }
 
         h1,
@@ -28,16 +29,25 @@
         }
 
         .section {
-            width: 36rem;
+            max-width: 36rem;
             margin: 2rem auto;
         }
 
         .verse {
-            margin-left: 6rem;
+            max-width: 30rem;
+            margin-left: auto;
         }
 
         .line-indented {
-            margin-left: 1em;
+            padding-left: 1em;
+        }
+
+        @media screen and (max-width: 32rem) {
+            .line {
+                display: inline-block;
+                margin-left: 2em;
+                text-indent: -2em;
+            }
         }
     </style>
 </head>
@@ -121,7 +131,8 @@
             <span class="line">FOreseeing winter and the leafless days.</span><br />
             <span class="line line-indented">The late flowers trembling on the ruined walls</span><br />
             <span class="line">Already stoop to hear that elven-flute.</span><br />
-            <span class="line line-indented">Through the wood&rsquo;s sunny aisles and tree-propped halls</span><br />
+            <span class="line line-indented">Through the wood&rsquo;s sunny aisles and tree-propped
+                halls</span><br />
             <span class="line">Winding amid the green with clear cold note</span><br />
             <span class="line">Like a thin strand of silver glass remote.</span>
         </p>

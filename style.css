@@ -1,0 +1,43 @@
+body {
+    counter-reset: section;
+    margin: 5rem 1rem;
+}
+
+h1,
+h2 {
+    text-align: center;
+    font-size: 1em;
+    font-weight: normal;
+    font-style: italic;
+    margin: 1rem 0;
+}
+
+h2::before {
+    counter-increment: section;
+    content: counter(section, upper-roman);
+    display: block;
+    font-style: normal;
+    margin: 1rem 0;
+}
+
+.section {
+    max-width: 36rem;
+    margin: 2rem auto;
+}
+
+.verse {
+    max-width: 30rem;
+    margin-left: auto;
+}
+
+.line-indented {
+    padding-left: 1em;
+}
+
+@media screen and (max-width: 32rem) {
+    .line {
+        display: inline-block;
+        margin-left: 2em;
+        text-indent: -2em;
+    }
+}

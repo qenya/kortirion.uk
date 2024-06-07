@@ -1,6 +1,7 @@
 body {
     counter-reset: section;
     margin: 5rem 1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 h1,
@@ -21,12 +22,12 @@ h2::before {
 }
 
 .section {
-    max-width: 36rem;
+    max-width: 31rem;
     margin: 2rem auto;
 }
 
 .verse {
-    max-width: 30rem;
+    max-width: 26rem;
     margin-left: auto;
 }
 
@@ -34,10 +35,8 @@ h2::before {
     padding-left: 1em;
 }
 
-@media screen and (max-width: 32rem) {
-    .line {
-        display: inline-block;
-        margin-left: 2em;
-        text-indent: -2em;
-    }
+.line {
+    display: inline-block;
+    margin-left: 2em;
+    text-indent: -2em;
 }

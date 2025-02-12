@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8" />
+    <title>The Trees of Kortirion</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <p>OpenType font features do not display on any element that shares all font properties with an element that has a property set using the ch unit.</p>
+    <p>The incorrect behaviour is observed on:</p>
+    <ul>
+        <li>Firefox 134.0.2 on Linux</li>
+        <li>Firefox 135.0 on Windows</li>
+        <li>Firefox 133.0 on Android</li>
+        <li>Firefox 135.0.1 on Android</li>
+    </ul>
+    <p>The correct behaviour is observed on:</p>
+    <ul>
+        <li>Firefox 135.0 on macOS 15.1</li>
+        <li>Chromium 133.0.6943.54 on macOS 15.1</li>
+        <li>Chromium 132.0.6834.159 on Linux</li>
+        <li>Edge 132.0.2957.140 on Windows</li>
+        <li>Vivaldi 7.1.3570.47 on Windows</li>
+        <li>Vivaldi 7.1.3580.99 on Android</li>
+        <li>Safari 18.1 (20619.2.8.11.10) on macOS 15.1</li>
+    </ul>
+    <div class="garamond">
+        <h1>EB Garamond</h1>
+        <p>The first div has a font-size of 7rem and a height of 10rem. The elongated "Q" displays correctly.</p>
+        <p>The second div has a font-size of 8rem and a height of 3ch. The elongated "Q" does not display, because of the use of the ch unit.</p>
+        <p>The third div has a font-size of 8rem and a height of 10rem. The elongated "Q" still does not display, because of the use of the ch unit in the second div, which has the same font-size.</p>
+        <div class="testcase correct">Queen</div>
+        <div class="testcase broken">Queen</div>
+        <div class="testcase also-broken">Queen</div>
+    </div>
+    <div class="open-sans">
+        <h1>Open Sans</h1>
+        <p>As for the other font.</p>
+        <div class="testcase correct">going</div>
+        <div class="testcase broken">going</div>
+        <div class="testcase also-broken">going</div>
+    </div>
+</body>
+
+</html>

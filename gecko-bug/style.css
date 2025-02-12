@@ -1,0 +1,70 @@
+@font-face {
+    font-family: "EB Garamond";
+    font-style: normal;
+    font-weight: 400;
+    src: url(./EBGaramond-Regular.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: url(./OpenSans-Regular.ttf) format("truetype");
+}
+
+@font-feature-values "EB Garamond" {
+    @swash {
+        long-q: 1;
+    }
+}
+
+@font-feature-values "Open Sans" {
+    @styleset {
+        alt-g: 1;
+    }
+}
+
+.garamond {
+    font-family: "EB Garamond", serif;
+    font-variant-alternates: swash(long-q);
+}
+
+.open-sans {
+    font-family: "Open Sans", sans-serif;
+    font-variant-alternates: styleset(alt-g);
+}
+
+.correct {
+    font-size: 7rem;
+    height: 10rem;
+}
+
+.broken {
+    font-size: 8rem;
+    height: 3ch;
+}
+
+.also-broken {
+    font-size: 8rem;
+    height: 10rem;
+}
+
+/* CSS below here is irrelevant to the bug */
+
+.testcase {
+    display: inline-block;
+    vertical-align: top;
+    width: 22rem;
+    margin: 1rem;
+    padding: 2rem;
+    border: 0.5rem dashed #ce5e46;
+}
+
+h1 {
+    font-weight: normal;
+    color: #ce5e46;
+}
+
+body {
+    background-color: #f9f9ef;
+}

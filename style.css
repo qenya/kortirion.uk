@@ -26,12 +26,14 @@ html {
     font-size-adjust: 0.4;
     font-variant-alternates: swash(fancy);
     line-height: 1.3rem;
+    color: #333;
+    background-color: #f9f9ef;
+    scrollbar-color: #ce5e46 #f9f9ef;
 }
 
 body {
     counter-reset: section;
     margin: 7.8rem 1.3rem;
-    background-color: #f9f9ef;
 }
 
 h1, h2 {

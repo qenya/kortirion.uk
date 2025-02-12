@@ -89,3 +89,10 @@ main {
     margin-left: 2em;
     text-indent: -2em;
 }
+
+.author {
+    text-align: center;
+    font-variant-caps: all-small-caps;
+    font-variant-numeric: oldstyle-nums;
+    margin-top: 3.9rem;
+}

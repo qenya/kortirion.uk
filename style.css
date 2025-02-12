@@ -59,6 +59,11 @@ h2::before {
     font-variant-caps: all-small-caps;
 }
 
+/* FIXME: using ch units here somehow breaks the OpenType features. */
+/* ...but only in Firefox, and not on Mac. **/
+/* needs further investigation. conceivably a Gecko bug. */
+/* verified it happens with other fonts too e.g. Open Sans (ss02 has a different "g") */
+
 .section {
     max-width: 55ch;
     margin: 0 auto;

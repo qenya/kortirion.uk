@@ -24,7 +24,6 @@ html {
     font-family: "EB Garamond", "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, serif;
     font-size: 1.25rem;
     font-size-adjust: 0.4;
-    font-variant-alternates: swash(fancy);
     line-height: 1.3rem;
     color: #333;
     background-color: #f9f9ef;
@@ -36,11 +35,16 @@ body {
     margin: 7.8rem 1.3rem;
 }
 
+main {
+    max-width: 40ch;
+    margin: 0 auto;
+}
+
 h1, h2 {
     text-align: center;
     font-weight: normal;
-    margin: 1.95rem 0 0.65rem;
     line-height: 2.6rem;
+    margin: 1.95rem 0 0.65rem;
 }
 
 h1 {
@@ -51,6 +55,7 @@ h1 {
 h2 {
     font-size: 1.5625rem;
     font-style: italic;
+    font-variant-alternates: swash(fancy);
 }
 
 h2::before {
@@ -70,17 +75,16 @@ h2::before {
     padding-left: 1em;
 }
 
-/* FIXME: These should be specified in ch units in case the webfont doesn't load,
- * but using ch units somehow breaks the OpenType features.
- * ...but only in Firefox, and not on Mac. Possibly a Gecko bug?
- */
-
-main {
-    max-width: 19.2rem; /* 40ch */
-    margin: 0 auto;
+.author {
+    text-align: center;
+    font-variant-caps: all-small-caps;
+    font-variant-numeric: oldstyle-nums;
+    margin-top: 3.9rem;
 }
 
-@media (min-width: 33.6rem) /* 70ch */ {
+/* Long lines: allow to overflow the column unless they would go offscreen altogether */
+
+@media (min-width: 70ch) {
     main {
         text-wrap: nowrap;
     }
@@ -90,11 +94,4 @@ main {
     display: inline-block;
     margin-left: 2em;
     text-indent: -2em;
-}
-
-.author {
-    text-align: center;
-    font-variant-caps: all-small-caps;
-    font-variant-numeric: oldstyle-nums;
-    margin-top: 3.9rem;
 }

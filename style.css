@@ -1,16 +1,48 @@
-body {
-    counter-reset: section;
-    margin: 5rem 1rem;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+@font-face {
+    font-family: "EB Garamond";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(./EBGaramond-Regular.woff2) format("woff2");
 }
 
-h1,
+@font-face {
+    font-family: "EB Garamond";
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url(./EBGaramond-Italic.woff2) format("woff2");
+}
+
+
+@font-feature-values "EB Garamond" {
+    @swash {
+        fancy: 1;
+    }
+}
+
+body {
+    counter-reset: section;
+    margin: 8rem 1rem;
+    background-color: #f9f9ef;
+    font-family: "EB Garamond", "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, serif;
+    font-size-adjust: 0.5;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.0625rem;
+    font-weight: normal;
+    color: #ce5e46;
+    margin: 4rem 0 2rem;
+}
+
 h2 {
     text-align: center;
-    font-size: 1em;
+    font-size: 1.5625rem;
     font-weight: normal;
     font-style: italic;
-    margin: 1rem 0;
+    margin: 2rem 0 1rem;
 }
 
 h2::before {
@@ -18,17 +50,19 @@ h2::before {
     content: counter(section, upper-roman);
     display: block;
     font-style: normal;
-    margin: 1rem 0;
+    font-variant-caps: all-small-caps;
+    margin-bottom: 0.5rem;
 }
 
 .section {
-    max-width: 31rem;
+    max-width: 33rem;
     margin: 2rem auto;
 }
 
 .verse {
-    max-width: 26rem;
+    max-width: 28rem;
     margin-left: auto;
+    font-variant-alternates: swash(fancy);
 }
 
 .line-indented {

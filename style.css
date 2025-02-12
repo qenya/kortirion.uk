@@ -14,7 +14,6 @@
     src: url(./EBGaramond-Italic.woff2) format("woff2");
 }
 
-
 @font-feature-values "EB Garamond" {
     @swash {
         fancy: 1;
@@ -25,6 +24,7 @@ html {
     font-family: "EB Garamond", "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, serif;
     font-size: 1.25rem;
     font-size-adjust: 0.4;
+    font-variant-alternates: swash(fancy);
     line-height: 1.3rem;
 }
 
@@ -68,7 +68,6 @@ h2::before {
     max-width: 47ch; /* Through the wood’s sunny aisles and tree-propped halls */
     margin-left: auto;
     margin-bottom: 1.3rem;
-    font-variant-alternates: swash(fancy);
 }
 
 .line-indented {

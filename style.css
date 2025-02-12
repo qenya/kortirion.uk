@@ -57,26 +57,31 @@ h2::before {
     display: block;
     font-style: normal;
     font-variant-caps: all-small-caps;
-}
-
-/* FIXME: using ch units here somehow breaks the OpenType features. */
-/* ...but only in Firefox, and not on Mac. **/
-/* needs further investigation. conceivably a Gecko bug. */
-/* verified it happens with other fonts too e.g. Open Sans (ss02 has a different "g") */
-
-.section {
-    max-width: 55ch;
-    margin: 0 auto;
+    margin-bottom: 0.65rem;
 }
 
 .verse {
-    max-width: 47ch; /* Through the wood’s sunny aisles and tree-propped halls */
-    margin-left: auto;
     margin-bottom: 1.3rem;
 }
 
 .line-indented {
     padding-left: 1em;
+}
+
+/* FIXME: These should be specified in ch units in case the webfont doesn't load,
+ * but using ch units somehow breaks the OpenType features.
+ * ...but only in Firefox, and not on Mac. Possibly a Gecko bug?
+ */
+
+main {
+    max-width: 19.2rem; /* 40ch */
+    margin: 0 auto;
+}
+
+@media (min-width: 33.6rem) /* 70ch */ {
+    main {
+        text-wrap: nowrap;
+    }
 }
 
 .line {
